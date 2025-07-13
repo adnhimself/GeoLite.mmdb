@@ -1,0 +1,209 @@
+{
+  "metro_areas": [
+    {
+      "metro_name": "Toronto Metro Area",
+      "province_code": "ON",
+      "cities": ["Toronto", "Mississauga", "Brampton", "Hamilton", "Markham", "Vaughan", "Kitchener", "Windsor", "Richmond Hill", "Oakville", "Burlington", "Oshawa", "Barrie", "St. Catharines", "Cambridge"]
+    },
+    {
+      "metro_name": "Montreal Metro Area",
+      "province_code": "QC",
+      "cities": ["Montreal", "Quebec City", "Laval", "Gatineau", "Longueuil", "Sherbrooke", "Saguenay", "Levis", "Trois-Rivières", "Terrebonne", "Saint-Jean-sur-Richelieu", "Repentigny", "Brossard", "Dollard-des-Ormeaux", "Drummondville"]
+    },
+    {
+      "metro_name": "Vancouver Metro Area",
+      "province_code": "BC",
+      "cities": ["Vancouver", "Surrey", "Burnaby", "Richmond", "Abbotsford", "Coquitlam", "Saanich", "Kelowna", "Delta", "Langley", "North Vancouver", "Kamloops", "Nanaimo", "Victoria", "Chilliwack"]
+    },
+    {
+      "metro_name": "Calgary Metro Area",
+      "province_code": "AB",
+      "cities": ["Calgary", "Edmonton", "Red Deer", "Lethbridge", "Medicine Hat", "Grande Prairie", "Airdrie", "Spruce Grove", "Leduc", "Lloydminster", "Camrose", "Fort Saskatchewan", "Brooks", "Cold Lake", "Wetaskiwin"]
+    },
+    {
+      "metro_name": "Ottawa Metro Area",
+      "province_code": "ON",
+      "cities": ["Ottawa", "Gatineau", "Kanata", "Nepean", "Gloucester", "Orleans", "Vanier", "Rockcliffe Park", "Westboro", "Hintonburg", "Centretown", "Byward Market", "New Edinburgh", "Riverside South", "Barrhaven"]
+    },
+    {
+      "metro_name": "Edmonton Metro Area",
+      "province_code": "AB",
+      "cities": ["Edmonton", "Calgary", "Red Deer", "Lethbridge", "Medicine Hat", "Grande Prairie", "Airdrie", "Spruce Grove", "Leduc", "Lloydminster", "Camrose", "Fort Saskatchewan", "Brooks", "Cold Lake", "Wetaskiwin"]
+    },
+    {
+      "metro_name": "Quebec City Metro Area",
+      "province_code": "QC",
+      "cities": ["Quebec City", "Montreal", "Laval", "Gatineau", "Longueuil", "Sherbrooke", "Saguenay", "Levis", "Trois-Rivières", "Terrebonne", "Saint-Jean-sur-Richelieu", "Repentigny", "Brossard", "Dollard-des-Ormeaux", "Drummondville"]
+    },
+    {
+      "metro_name": "Winnipeg Metro Area",
+      "province_code": "MB",
+      "cities": ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Winkler", "Selkirk", "Morden", "Dauphin", "The Pas", "Flin Flon", "Gimli", "Stonewall", "Beausejour", "Niverville"]
+    },
+    {
+      "metro_name": "Hamilton Metro Area",
+      "province_code": "ON",
+      "cities": ["Hamilton", "Toronto", "Mississauga", "Brampton", "Markham", "Vaughan", "Kitchener", "Windsor", "Richmond Hill", "Oakville", "Burlington", "Oshawa", "Barrie", "St. Catharines", "Cambridge"]
+    },
+    {
+      "metro_name": "Kitchener-Waterloo Metro Area",
+      "province_code": "ON",
+      "cities": ["Kitchener", "Waterloo", "Cambridge", "Guelph", "Brantford", "Stratford", "Woodstock", "Ingersoll", "Paris", "Elmira", "New Hamburg", "Ayr", "Baden", "St. Jacobs", "Linwood"]
+    },
+    {
+      "metro_name": "London Metro Area",
+      "province_code": "ON",
+      "cities": ["London", "St. Thomas", "Strathroy", "Woodstock", "Tillsonburg", "Ingersoll", "Exeter", "Parkhill", "Glencoe", "Ailsa Craig", "Dorchester", "Komoka", "Byron", "Lambeth", "Arva"]
+    },
+    {
+      "metro_name": "Halifax Metro Area",
+      "province_code": "NS",
+      "cities": ["Halifax", "Dartmouth", "Bedford", "Sackville", "Sydney", "Glace Bay", "Sydney Mines", "New Glasgow", "Truro", "Amherst", "Kentville", "Yarmouth", "Bridgewater", "Antigonish", "Digby"]
+    },
+    {
+      "metro_name": "Victoria Metro Area",
+      "province_code": "BC",
+      "cities": ["Victoria", "Saanich", "Esquimalt", "Oak Bay", "View Royal", "Colwood", "Langford", "Sidney", "North Saanich", "Central Saanich", "Sooke", "Metchosin", "Highlands", "Salt Spring Island", "Duncan"]
+    },
+    {
+      "metro_name": "Windsor Metro Area",
+      "province_code": "ON",
+      "cities": ["Windsor", "Chatham", "Sarnia", "Leamington", "Amherstburg", "Tecumseh", "LaSalle", "Lakeshore", "Kingsville", "Essex", "Belle River", "Harrow", "Comber", "Stoney Point", "McGregor"]
+    },
+    {
+      "metro_name": "Oshawa Metro Area",
+      "province_code": "ON",
+      "cities": ["Oshawa", "Whitby", "Ajax", "Pickering", "Bowmanville", "Courtice", "Brooklin", "Port Perry", "Uxbridge", "Stouffville", "Markham", "Richmond Hill", "Thornhill", "Aurora", "Newmarket"]
+    },
+    {
+      "metro_name": "Saskatoon Metro Area",
+      "province_code": "SK",
+      "cities": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford", "Estevan", "Weyburn", "Lloydminster", "Melfort", "Humboldt", "Kindersley", "Meadow Lake", "Battleford"]
+    },
+    {
+      "metro_name": "Regina Metro Area",
+      "province_code": "SK",
+      "cities": ["Regina", "Saskatoon", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford", "Estevan", "Weyburn", "Lloydminster", "Melfort", "Humboldt", "Kindersley", "Meadow Lake", "Battleford"]
+    },
+    {
+      "metro_name": "St. John's Metro Area",
+      "province_code": "NL",
+      "cities": ["St. John's", "Mount Pearl", "Conception Bay South", "Paradise", "Corner Brook", "Grand Falls-Windsor", "Gander", "Happy Valley-Goose Bay", "Labrador City", "Stephenville", "Placentia", "Bay Roberts", "Carbonear", "Clarenville", "Deer Lake"]
+    },
+    {
+      "metro_name": "Barrie Metro Area",
+      "province_code": "ON",
+      "cities": ["Barrie", "Orillia", "Collingwood", "Midland", "Penetanguishene", "Wasaga Beach", "Stayner", "Alliston", "Angus", "Elmvale", "Thornton", "Midhurst", "Oro-Medonte", "Springwater", "Innisfil"]
+    },
+    {
+      "metro_name": "Kelowna Metro Area",
+      "province_code": "BC",
+      "cities": ["Kelowna", "Kamloops", "Penticton", "Vernon", "Salmon Arm", "Merritt", "Princeton", "Summerland", "Peachland", "West Kelowna", "Lake Country", "Enderby", "Armstrong", "Lumby", "Coldstream"]
+    },
+    {
+      "metro_name": "Abbotsford Metro Area",
+      "province_code": "BC",
+      "cities": ["Abbotsford", "Chilliwack", "Mission", "Langley", "Maple Ridge", "Pitt Meadows", "Harrison Hot Springs", "Agassiz", "Hope", "Kent", "Rosedale", "Yarrow", "Bradner", "Glen Valley", "Aldergrove"]
+    },
+    {
+      "metro_name": "Greater Sudbury Metro Area",
+      "province_code": "ON",
+      "cities": ["Greater Sudbury", "North Bay", "Sault Ste. Marie", "Thunder Bay", "Timmins", "Elliot Lake", "Kirkland Lake", "Kapuskasing", "Iroquois Falls", "Cochrane", "Hearst", "Smooth Rock Falls", "Matheson", "New Liskeard", "Haileybury"]
+    },
+    {
+      "metro_name": "Kingston Metro Area",
+      "province_code": "ON",
+      "cities": ["Kingston", "Belleville", "Cornwall", "Brockville", "Pembroke", "Petawawa", "Smiths Falls", "Gananoque", "Prescott", "Morrisburg", "Napanee", "Picton", "Trenton", "Brighton", "Cobourg"]
+    },
+    {
+      "metro_name": "Saguenay Metro Area",
+      "province_code": "QC",
+      "cities": ["Saguenay", "Chicoutimi", "Jonquière", "La Baie", "Alma", "Dolbeau-Mistassini", "Roberval", "Saint-Félicien", "Chibougamau", "Normandin", "Métabetchouan-Lac-à-la-Croix", "Chambord", "Desbiens", "Hébertville", "Saint-Prime"]
+    },
+    {
+      "metro_name": "Sherbrooke Metro Area",
+      "province_code": "QC",
+      "cities": ["Sherbrooke", "Granby", "Magog", "Drummondville", "Saint-Hyacinthe", "Victoriaville", "Sorel-Tracy", "Saint-Jean-sur-Richelieu", "Cowansville", "Bromont", "Waterloo", "Lac-Mégantic", "Richmond", "Windsor", "Asbestos"]
+    },
+    {
+      "metro_name": "Trois-Rivières Metro Area",
+      "province_code": "QC",
+      "cities": ["Trois-Rivières", "Shawinigan", "Grand-Mère", "La Tuque", "Louiseville", "Nicolet", "Bécancour", "Drummondville", "Saint-Tite", "Sainte-Anne-de-la-Pérade", "Batiscan", "Champlain", "Cap-de-la-Madeleine", "Pointe-du-Lac", "Saint-Maurice"]
+    },
+    {
+      "metro_name": "Moncton Metro Area",
+      "province_code": "NB",
+      "cities": ["Moncton", "Saint John", "Fredericton", "Dieppe", "Riverview", "Bathurst", "Miramichi", "Edmundston", "Campbellton", "Caraquet", "Sussex", "Sackville", "Shediac", "Petitcodiac", "Bouctouche"]
+    },
+    {
+      "metro_name": "Saint John Metro Area",
+      "province_code": "NB",
+      "cities": ["Saint John", "Moncton", "Fredericton", "Dieppe", "Riverview", "Bathurst", "Miramichi", "Edmundston", "Campbellton", "Caraquet", "Sussex", "Sackville", "Shediac", "Petitcodiac", "Bouctouche"]
+    },
+    {
+      "metro_name": "Charlottetown Metro Area",
+      "province_code": "PE",
+      "cities": ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Souris", "Kensington", "Alberton", "Tignish", "Georgetown", "Borden-Carleton", "Murray River", "Cardigan", "Crapaud", "Hunter River"]
+    },
+    {
+      "metro_name": "Thunder Bay Metro Area",
+      "province_code": "ON",
+      "cities": ["Thunder Bay", "Kenora", "Dryden", "Sioux Lookout", "Fort Frances", "Atikokan", "Geraldton", "Nipigon", "Marathon", "Terrace Bay", "Schreiber", "Red Lake", "Pickle Lake", "Ignace", "Wawa"]
+    },
+    {
+      "metro_name": "Peterborough Metro Area",
+      "province_code": "ON",
+      "cities": ["Peterborough", "Kawartha Lakes", "Cobourg", "Port Hope", "Lindsay", "Fenelon Falls", "Bobcaygeon", "Omemee", "Lakefield", "Norwood", "Hastings", "Campbellford", "Brighton", "Colborne", "Grafton"]
+    },
+    {
+      "metro_name": "Brantford Metro Area",
+      "province_code": "ON",
+      "cities": ["Brantford", "Cambridge", "Paris", "Simcoe", "Delhi", "Tillsonburg", "Norwich", "Burford", "St. George", "Glen Morris", "Caledonia", "Hagersville", "Jarvis", "Port Dover", "Waterford"]
+    },
+    {
+      "metro_name": "Red Deer Metro Area",
+      "province_code": "AB",
+      "cities": ["Red Deer", "Lacombe", "Ponoka", "Wetaskiwin", "Camrose", "Stettler", "Olds", "Didsbury", "Sundre", "Rocky Mountain House", "Innisfail", "Sylvan Lake", "Blackfalds", "Penhold", "Bowden"]
+    },
+    {
+      "metro_name": "Lethbridge Metro Area",
+      "province_code": "AB",
+      "cities": ["Lethbridge", "Medicine Hat", "Taber", "Coaldale", "Picture Butte", "Bow Island", "Redcliff", "Irvine", "Milk River", "Cardston", "Magrath", "Raymond", "Stirling", "Warner", "Nobleford"]
+    },
+    {
+      "metro_name": "Kamloops Metro Area",
+      "province_code": "BC",
+      "cities": ["Kamloops", "Kelowna", "Vernon", "Salmon Arm", "Merritt", "Ashcroft", "Clearwater", "Barriere", "Chase", "Sun Peaks", "Little Fort", "Westwold", "Falkland", "Monte Creek", "Savona"]
+    },
+    {
+      "metro_name": "Nanaimo Metro Area",
+      "province_code": "BC",
+      "cities": ["Nanaimo", "Parksville", "Qualicum Beach", "Port Alberni", "Courtenay", "Comox", "Campbell River", "Duncan", "Ladysmith", "Chemainus", "Lake Cowichan", "Youbou", "Honeymoon Bay", "Mesachie Lake", "Cowichan Bay"]
+    },
+    {
+      "metro_name": "Prince George Metro Area",
+      "province_code": "BC",
+      "cities": ["Prince George", "Quesnel", "Williams Lake", "Dawson Creek", "Fort St. John", "Terrace", "Prince Rupert", "Kitimat", "Smithers", "Vanderhoof", "Fraser Lake", "Fort St. James", "Mackenzie", "Chetwynd", "Hudson's Hope"]
+    },
+    {
+      "metro_name": "Sault Ste. Marie Metro Area",
+      "province_code": "ON",
+      "cities": ["Sault Ste. Marie", "Elliot Lake", "Wawa", "Blind River", "Thessalon", "Bruce Mines", "Desbarats", "Echo Bay", "Goulais River", "Searchmont", "Batchawana Bay", "Montreal River", "Dubreuilville", "White River", "Hornepayne"]
+    },
+    {
+      "metro_name": "North Bay Metro Area",
+      "province_code": "ON",
+      "cities": ["North Bay", "Sudbury", "Timmins", "Kirkland Lake", "Kapuskasing", "Iroquois Falls", "Cochrane", "Hearst", "Smooth Rock Falls", "Matheson", "New Liskeard", "Haileybury", "Cobalt", "Englehart", "Virginiatown"]
+    },
+    {
+      "metro_name": "Medicine Hat Metro Area",
+      "province_code": "AB",
+      "cities": ["Medicine Hat", "Lethbridge", "Taber", "Coaldale", "Picture Butte", "Bow Island", "Redcliff", "Irvine", "Milk River", "Cardston", "Magrath", "Raymond", "Stirling", "Warner", "Nobleford"]
+    },
+    {
+      "metro_name": "Grande Prairie Metro Area",
+      "province_code": "AB",
+      "cities": ["Grande Prairie", "Peace River", "High Prairie", "Slave Lake", "Athabasca", "Westlock", "Barrhead", "Whitecourt", "Mayerthorpe", "Onoway", "Morinville", "Legal", "Redwater", "Bruderheim", "Lamont"]
+    }
+  ]
+}

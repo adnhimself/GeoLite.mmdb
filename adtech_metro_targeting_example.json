@@ -1,0 +1,190 @@
+{
+  "metro_to_cities_mapping": {
+    "Buffalo Metro Area": [
+      "Buffalo", "Amherst", "Cheektowaga", "Clarence", "Depew", "East Amherst", 
+      "Kenmore", "Lackawanna", "Lancaster", "Tonawanda", "West Seneca", 
+      "Williamsville", "Niagara Falls", "Lockport", "North Tonawanda"
+    ],
+    "New York Metro Area": [
+      "New York", "Brooklyn", "Queens", "Bronx", "Staten Island", "Jersey City", 
+      "Newark", "Yonkers", "Mount Vernon", "New Rochelle", "White Plains", 
+      "Stamford", "Bridgeport", "Norwalk", "Danbury"
+    ],
+    "Los Angeles Metro Area": [
+      "Los Angeles", "Long Beach", "Anaheim", "Santa Ana", "Riverside", 
+      "San Bernardino", "Glendale", "Huntington Beach", "Irvine", "Fremont", 
+      "Santa Clarita", "Oxnard", "Fontana", "Moreno Valley", "Palmdale"
+    ]
+  },
+  "cities_to_metro_mapping": {
+    "Buffalo": "Buffalo Metro Area",
+    "Amherst": "Buffalo Metro Area",
+    "Cheektowaga": "Buffalo Metro Area",
+    "Clarence": "Buffalo Metro Area",
+    "Depew": "Buffalo Metro Area",
+    "East Amherst": "Buffalo Metro Area",
+    "Kenmore": "Buffalo Metro Area",
+    "Lackawanna": "Buffalo Metro Area",
+    "Lancaster": "Buffalo Metro Area",
+    "Tonawanda": "Buffalo Metro Area",
+    "West Seneca": "Buffalo Metro Area",
+    "Williamsville": "Buffalo Metro Area",
+    "Niagara Falls": "Buffalo Metro Area",
+    "Lockport": "Buffalo Metro Area",
+    "North Tonawanda": "Buffalo Metro Area",
+    "New York": "New York Metro Area",
+    "Brooklyn": "New York Metro Area",
+    "Queens": "New York Metro Area",
+    "Bronx": "New York Metro Area",
+    "Staten Island": "New York Metro Area",
+    "Jersey City": "New York Metro Area",
+    "Newark": "New York Metro Area",
+    "Yonkers": "New York Metro Area",
+    "Mount Vernon": "New York Metro Area",
+    "New Rochelle": "New York Metro Area",
+    "White Plains": "New York Metro Area",
+    "Stamford": "New York Metro Area",
+    "Bridgeport": "New York Metro Area",
+    "Norwalk": "New York Metro Area",
+    "Danbury": "New York Metro Area"
+  },
+  "database_schemas": {
+    "campaigns": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "targeting_type": "TEXT",
+      "created_at": "TIMESTAMP"
+    },
+    "campaign_targeting": {
+      "id": "INTEGER PRIMARY KEY",
+      "campaign_id": "INTEGER",
+      "target_type": "TEXT",
+      "target_value": "TEXT",
+      "created_at": "TIMESTAMP"
+    },
+    "ip_logs": {
+      "id": "INTEGER PRIMARY KEY",
+      "ip_address": "TEXT",
+      "city": "TEXT",
+      "state_code": "TEXT",
+      "campaign_id": "INTEGER",
+      "matched": "BOOLEAN",
+      "timestamp": "TIMESTAMP"
+    }
+  },
+  "api_examples": {
+    "create_campaign": {
+      "endpoint": "POST /api/campaigns",
+      "request_body": {
+        "name": "Buffalo Metro Campaign",
+        "targeting": {
+          "type": "metro",
+          "metros": ["Buffalo Metro Area"],
+          "states": ["NY"]
+        }
+      },
+      "response": {
+        "campaign_id": 123,
+        "expanded_cities": [
+          "Buffalo", "Amherst", "Cheektowaga", "Clarence", "Depew", "East Amherst", 
+          "Kenmore", "Lackawanna", "Lancaster", "Tonawanda", "West Seneca", 
+          "Williamsville", "Niagara Falls", "Lockport", "North Tonawanda"
+        ],
+        "targeting_records_created": 15
+      }
+    },
+    "check_ip_match": {
+      "endpoint": "POST /api/check-targeting",
+      "request_body": {
+        "ip_address": "74.77.103.181",
+        "campaign_id": 123
+      },
+      "response": {
+        "matched": true,
+        "city": "Buffalo",
+        "state_code": "NY",
+        "metro_area": "Buffalo Metro Area",
+        "postal_code": "14211"
+      }
+    }
+  },
+  "frontend_examples": {
+    "advertiser_interface": {
+      "metro_selector": {
+        "type": "multi-select",
+        "options": [
+          {"value": "Buffalo Metro Area", "label": "Buffalo Metro Area (NY)", "cities_count": 15},
+          {"value": "New York Metro Area", "label": "New York Metro Area (NY)", "cities_count": 15},
+          {"value": "Los Angeles Metro Area", "label": "Los Angeles Metro Area (CA)", "cities_count": 15}
+        ]
+      },
+      "selected_targeting": {
+        "metros": ["Buffalo Metro Area"],
+        "preview_text": "Targeting Buffalo Metro Area (15 cities in NY)",
+        "expanded_cities": [
+          "Buffalo", "Amherst", "Cheektowaga", "Clarence", "Depew", "East Amherst", 
+          "Kenmore", "Lackawanna", "Lancaster", "Tonawanda", "West Seneca", 
+          "Williamsville", "Niagara Falls", "Lockport", "North Tonawanda"
+        ]
+      }
+    }
+  },
+  "real_time_matching": {
+    "description": "Function to match IP addresses against campaign targeting in real-time",
+    "parameters": {
+      "ip_address": "string",
+      "campaign_id": "integer"
+    },
+    "process": [
+      "1. Use MaxMind MMDB to get city and state from IP",
+      "2. Query campaign_targeting table for this campaign",
+      "3. Check if detected city matches any targeted cities",
+      "4. Log result to ip_logs table",
+      "5. Return match status"
+    ],
+    "sample_results": {
+      "buffalo_ip": {
+        "ip": "74.77.103.181",
+        "detected_city": "Buffalo",
+        "detected_state": "NY",
+        "campaign_cities": ["Buffalo", "Amherst", "Cheektowaga"],
+        "matched": true,
+        "metro_area": "Buffalo Metro Area"
+      },
+      "amherst_ip": {
+        "ip": "24.213.146.108",
+        "detected_city": "Amherst",
+        "detected_state": "NY",
+        "campaign_cities": ["Buffalo", "Amherst", "Cheektowaga"],
+        "matched": true,
+        "metro_area": "Buffalo Metro Area"
+      },
+      "rochester_ip": {
+        "ip": "99.99.99.99",
+        "detected_city": "Rochester",
+        "detected_state": "NY",
+        "campaign_cities": ["Buffalo", "Amherst", "Cheektowaga"],
+        "matched": false,
+        "metro_area": null
+      }
+    }
+  },
+  "integration_notes": {
+    "key_distinctions": [
+      "Individual City: 'Buffalo' targets only Buffalo city limits",
+      "Metro Area: 'Buffalo Metro Area' targets entire metro including suburbs",
+      "State targeting remains unchanged"
+    ],
+    "advertiser_benefits": [
+      "Simple metro area selection instead of listing 15+ individual cities",
+      "Better geographic coverage without manual city research",
+      "Consistent with how advertisers think about markets"
+    ],
+    "technical_implementation": [
+      "Pre-compute metro-to-cities mapping on campaign creation",
+      "Store individual cities in targeting table for fast IP matching",
+      "Use existing MaxMind MMDB infrastructure",
+      "Maintain backward compatibility with individual city targeting"
+    ]
+  }
+}
