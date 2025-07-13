@@ -1,0 +1,82 @@
+{
+  "description": "This JSON shows what gets added to your existing cities.js file to support metro area targeting",
+  "integration_method": "Add metro area names directly to existing state arrays",
+  "existing_format": {
+    "NY": ["Albany", "Buffalo", "New York", "Rochester", "Syracuse", "Yonkers"],
+    "CA": ["Los Angeles", "San Francisco", "San Diego", "San Jose", "Fresno"],
+    "TX": ["Houston", "Dallas", "San Antonio", "Austin", "Fort Worth"]
+  },
+  "updated_format_with_metros": {
+    "NY": [
+      "Albany", "Buffalo", "New York", "Rochester", "Syracuse", "Yonkers",
+      "Buffalo Metro Area", "New York Metro Area", "Rochester Metro Area"
+    ],
+    "CA": [
+      "Los Angeles", "San Francisco", "San Diego", "San Jose", "Fresno",
+      "Los Angeles Metro Area", "San Francisco Bay Area", "San Diego Metro Area"
+    ],
+    "TX": [
+      "Houston", "Dallas", "San Antonio", "Austin", "Fort Worth",
+      "Dallas-Fort Worth Metro Area", "Houston Metro Area", "San Antonio Metro Area"
+    ]
+  },
+  "complete_example_additions": {
+    "AL": ["Birmingham Metro Area"],
+    "AZ": ["Phoenix Metro Area"],
+    "CA": ["Los Angeles Metro Area", "San Francisco Bay Area", "San Diego Metro Area", "Sacramento Metro Area", "San Jose Metro Area"],
+    "CO": ["Denver Metro Area"],
+    "CT": ["Hartford Metro Area"],
+    "DC": ["Washington DC Metro Area"],
+    "FL": ["Miami Metro Area", "Tampa Bay Metro Area", "Orlando Metro Area", "Jacksonville Metro Area"],
+    "GA": ["Atlanta Metro Area"],
+    "IL": ["Chicago Metro Area"],
+    "IN": ["Indianapolis Metro Area"],
+    "KY": ["Louisville Metro Area"],
+    "LA": ["New Orleans Metro Area"],
+    "MA": ["Boston Metro Area"],
+    "MD": ["Baltimore Metro Area"],
+    "MI": ["Detroit Metro Area", "Grand Rapids Metro Area"],
+    "MN": ["Minneapolis-St. Paul Metro Area"],
+    "MO": ["St. Louis Metro Area", "Kansas City Metro Area"],
+    "NC": ["Charlotte Metro Area"],
+    "NV": ["Las Vegas Metro Area"],
+    "NY": ["New York Metro Area", "Buffalo Metro Area", "Rochester Metro Area"],
+    "OH": ["Cincinnati Metro Area", "Cleveland Metro Area", "Columbus Metro Area"],
+    "OK": ["Oklahoma City Metro Area"],
+    "OR": ["Portland Metro Area"],
+    "PA": ["Philadelphia Metro Area", "Pittsburgh Metro Area"],
+    "RI": ["Providence Metro Area"],
+    "TN": ["Nashville Metro Area", "Memphis Metro Area"],
+    "TX": ["Dallas-Fort Worth Metro Area", "Houston Metro Area", "San Antonio Metro Area", "Austin Metro Area"],
+    "UT": ["Salt Lake City Metro Area"],
+    "VA": ["Virginia Beach Metro Area", "Richmond Metro Area"],
+    "WA": ["Seattle Metro Area"],
+    "WI": ["Milwaukee Metro Area"]
+  },
+  "backend_logic": {
+    "description": "How the backend distinguishes between individual cities and metro areas",
+    "rules": [
+      "Names ending in 'Metro Area' are expanded to constituent cities",
+      "Individual city names target only that specific city",
+      "Metro areas use MaxMind city-level data but group multiple cities together"
+    ],
+    "example_expansion": {
+      "user_selects": "Buffalo Metro Area",
+      "backend_expands_to": [
+        "Buffalo", "Amherst", "Cheektowaga", "Clarence", "Depew", "East Amherst",
+        "Kenmore", "Lackawanna", "Lancaster", "Tonawanda", "West Seneca",
+        "Williamsville", "Niagara Falls", "Lockport", "North Tonawanda"
+      ]
+    }
+  },
+  "user_experience": {
+    "advertiser_sees": ["Buffalo", "Buffalo Metro Area", "Rochester", "Syracuse"],
+    "meaning": {
+      "Buffalo": "City of Buffalo only (narrow targeting)",
+      "Buffalo Metro Area": "Buffalo + 14 surrounding cities (broad targeting)",
+      "Rochester": "City of Rochester only",
+      "Syracuse": "City of Syracuse only"
+    },
+    "recommended_usage": "Most advertisers should select metro areas for better coverage"
+  }
+}
