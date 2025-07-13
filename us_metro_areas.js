@@ -1,13 +1,14 @@
 /**
  * Top 50 US Metro Areas Mapping
- * Cities are limited to the primary state only to avoid cross-state confusion
+ * Uses state codes (NY, CA, etc.) to match cities.js format
+ * Metro area names designed to be added to cities.js arrays
  */
 
 const US_METRO_AREAS = {
   "new-york-metro": {
     name: "New York City Metro Area",
     display_name: "New York Metro",
-    state: "NY",
+    state_code: "NY",
     primary_city: "New York",
     cities: [
       "New York",
@@ -33,7 +34,7 @@ const US_METRO_AREAS = {
   "los-angeles-metro": {
     name: "Los Angeles Metro Area",
     display_name: "Los Angeles Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "Los Angeles",
     cities: [
       "Los Angeles",
@@ -59,7 +60,7 @@ const US_METRO_AREAS = {
   "chicago-metro": {
     name: "Chicago Metro Area",
     display_name: "Chicago Metro",
-    state: "IL",
+    state_code: "IL",
     primary_city: "Chicago",
     cities: [
       "Chicago",
@@ -85,7 +86,7 @@ const US_METRO_AREAS = {
   "houston-metro": {
     name: "Houston Metro Area",
     display_name: "Houston Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "Houston",
     cities: [
       "Houston",
@@ -111,7 +112,7 @@ const US_METRO_AREAS = {
   "phoenix-metro": {
     name: "Phoenix Metro Area",
     display_name: "Phoenix Metro",
-    state: "AZ",
+    state_code: "AZ",
     primary_city: "Phoenix",
     cities: [
       "Phoenix",
@@ -137,7 +138,7 @@ const US_METRO_AREAS = {
   "philadelphia-metro": {
     name: "Philadelphia Metro Area",
     display_name: "Philadelphia Metro",
-    state: "PA",
+    state_code: "PA",
     primary_city: "Philadelphia",
     cities: [
       "Philadelphia",
@@ -163,7 +164,7 @@ const US_METRO_AREAS = {
   "san-antonio-metro": {
     name: "San Antonio Metro Area",
     display_name: "San Antonio Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "San Antonio",
     cities: [
       "San Antonio",
@@ -189,7 +190,7 @@ const US_METRO_AREAS = {
   "san-diego-metro": {
     name: "San Diego Metro Area",
     display_name: "San Diego Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "San Diego",
     cities: [
       "San Diego",
@@ -215,7 +216,7 @@ const US_METRO_AREAS = {
   "dallas-metro": {
     name: "Dallas Metro Area",
     display_name: "Dallas Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "Dallas",
     cities: [
       "Dallas",
@@ -241,7 +242,7 @@ const US_METRO_AREAS = {
   "san-jose-metro": {
     name: "San Jose Metro Area",
     display_name: "San Jose Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "San Jose",
     cities: [
       "San Jose",
@@ -267,7 +268,7 @@ const US_METRO_AREAS = {
   "austin-metro": {
     name: "Austin Metro Area",
     display_name: "Austin Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "Austin",
     cities: [
       "Austin",
@@ -293,7 +294,7 @@ const US_METRO_AREAS = {
   "jacksonville-metro": {
     name: "Jacksonville Metro Area",
     display_name: "Jacksonville Metro",
-    state: "FL",
+    state_code: "FL",
     primary_city: "Jacksonville",
     cities: [
       "Jacksonville",
@@ -319,7 +320,7 @@ const US_METRO_AREAS = {
   "fort-worth-metro": {
     name: "Fort Worth Metro Area",
     display_name: "Fort Worth Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "Fort Worth",
     cities: [
       "Fort Worth",
@@ -345,7 +346,7 @@ const US_METRO_AREAS = {
   "columbus-metro": {
     name: "Columbus Metro Area",
     display_name: "Columbus Metro",
-    state: "OH",
+    state_code: "OH",
     primary_city: "Columbus",
     cities: [
       "Columbus",
@@ -371,7 +372,7 @@ const US_METRO_AREAS = {
   "charlotte-metro": {
     name: "Charlotte Metro Area",
     display_name: "Charlotte Metro",
-    state: "NC",
+    state_code: "NC",
     primary_city: "Charlotte",
     cities: [
       "Charlotte",
@@ -397,7 +398,7 @@ const US_METRO_AREAS = {
   "indianapolis-metro": {
     name: "Indianapolis Metro Area",
     display_name: "Indianapolis Metro",
-    state: "IN",
+    state_code: "IN",
     primary_city: "Indianapolis",
     cities: [
       "Indianapolis",
@@ -423,7 +424,7 @@ const US_METRO_AREAS = {
   "san-francisco-metro": {
     name: "San Francisco Metro Area",
     display_name: "San Francisco Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "San Francisco",
     cities: [
       "San Francisco",
@@ -449,7 +450,7 @@ const US_METRO_AREAS = {
   "seattle-metro": {
     name: "Seattle Metro Area",
     display_name: "Seattle Metro",
-    state: "WA",
+    state_code: "WA",
     primary_city: "Seattle",
     cities: [
       "Seattle",
@@ -475,7 +476,7 @@ const US_METRO_AREAS = {
   "denver-metro": {
     name: "Denver Metro Area",
     display_name: "Denver Metro",
-    state: "CO",
+    state_code: "CO",
     primary_city: "Denver",
     cities: [
       "Denver",
@@ -501,7 +502,7 @@ const US_METRO_AREAS = {
   "washington-metro": {
     name: "Washington DC Metro Area",
     display_name: "Washington Metro",
-    state: "DC",
+    state_code: "DC",
     primary_city: "Washington",
     cities: [
       "Washington"
@@ -513,7 +514,7 @@ const US_METRO_AREAS = {
   "boston-metro": {
     name: "Boston Metro Area",
     display_name: "Boston Metro",
-    state: "MA",
+    state_code: "MA",
     primary_city: "Boston",
     cities: [
       "Boston",
@@ -539,7 +540,7 @@ const US_METRO_AREAS = {
   "el-paso-metro": {
     name: "El Paso Metro Area",
     display_name: "El Paso Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "El Paso",
     cities: [
       "El Paso",
@@ -565,7 +566,7 @@ const US_METRO_AREAS = {
   "detroit-metro": {
     name: "Detroit Metro Area",
     display_name: "Detroit Metro",
-    state: "MI",
+    state_code: "MI",
     primary_city: "Detroit",
     cities: [
       "Detroit",
@@ -591,7 +592,7 @@ const US_METRO_AREAS = {
   "nashville-metro": {
     name: "Nashville Metro Area",
     display_name: "Nashville Metro",
-    state: "TN",
+    state_code: "TN",
     primary_city: "Nashville",
     cities: [
       "Nashville",
@@ -617,7 +618,7 @@ const US_METRO_AREAS = {
   "portland-metro": {
     name: "Portland Metro Area",
     display_name: "Portland Metro",
-    state: "OR",
+    state_code: "OR",
     primary_city: "Portland",
     cities: [
       "Portland",
@@ -643,7 +644,7 @@ const US_METRO_AREAS = {
   "oklahoma-city-metro": {
     name: "Oklahoma City Metro Area",
     display_name: "Oklahoma City Metro",
-    state: "OK",
+    state_code: "OK",
     primary_city: "Oklahoma City",
     cities: [
       "Oklahoma City",
@@ -669,7 +670,7 @@ const US_METRO_AREAS = {
   "las-vegas-metro": {
     name: "Las Vegas Metro Area",
     display_name: "Las Vegas Metro",
-    state: "NV",
+    state_code: "NV",
     primary_city: "Las Vegas",
     cities: [
       "Las Vegas",
@@ -695,7 +696,7 @@ const US_METRO_AREAS = {
   "louisville-metro": {
     name: "Louisville Metro Area",
     display_name: "Louisville Metro",
-    state: "KY",
+    state_code: "KY",
     primary_city: "Louisville",
     cities: [
       "Louisville",
@@ -721,7 +722,7 @@ const US_METRO_AREAS = {
   "baltimore-metro": {
     name: "Baltimore Metro Area",
     display_name: "Baltimore Metro",
-    state: "MD",
+    state_code: "MD",
     primary_city: "Baltimore",
     cities: [
       "Baltimore",
@@ -747,7 +748,7 @@ const US_METRO_AREAS = {
   "milwaukee-metro": {
     name: "Milwaukee Metro Area",
     display_name: "Milwaukee Metro",
-    state: "WI",
+    state_code: "WI",
     primary_city: "Milwaukee",
     cities: [
       "Milwaukee",
@@ -773,7 +774,7 @@ const US_METRO_AREAS = {
   "albuquerque-metro": {
     name: "Albuquerque Metro Area",
     display_name: "Albuquerque Metro",
-    state: "NM",
+    state_code: "NM",
     primary_city: "Albuquerque",
     cities: [
       "Albuquerque",
@@ -799,7 +800,7 @@ const US_METRO_AREAS = {
   "tucson-metro": {
     name: "Tucson Metro Area",
     display_name: "Tucson Metro",
-    state: "AZ",
+    state_code: "AZ",
     primary_city: "Tucson",
     cities: [
       "Tucson",
@@ -825,7 +826,7 @@ const US_METRO_AREAS = {
   "fresno-metro": {
     name: "Fresno Metro Area",
     display_name: "Fresno Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "Fresno",
     cities: [
       "Fresno",
@@ -851,7 +852,7 @@ const US_METRO_AREAS = {
   "sacramento-metro": {
     name: "Sacramento Metro Area",
     display_name: "Sacramento Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "Sacramento",
     cities: [
       "Sacramento",
@@ -877,7 +878,7 @@ const US_METRO_AREAS = {
   "long-beach-metro": {
     name: "Long Beach Metro Area",
     display_name: "Long Beach Metro",
-    state: "CA",
+    state_code: "CA",
     primary_city: "Long Beach",
     cities: [
       "Long Beach",
@@ -903,7 +904,7 @@ const US_METRO_AREAS = {
   "kansas-city-metro": {
     name: "Kansas City Metro Area",
     display_name: "Kansas City Metro",
-    state: "MO",
+    state_code: "MO",
     primary_city: "Kansas City",
     cities: [
       "Kansas City",
@@ -929,7 +930,7 @@ const US_METRO_AREAS = {
   "mesa-metro": {
     name: "Mesa Metro Area",
     display_name: "Mesa Metro",
-    state: "AZ",
+    state_code: "AZ",
     primary_city: "Mesa",
     cities: [
       "Mesa",
@@ -955,7 +956,7 @@ const US_METRO_AREAS = {
   "virginia-beach-metro": {
     name: "Virginia Beach Metro Area",
     display_name: "Virginia Beach Metro",
-    state: "VA",
+    state_code: "VA",
     primary_city: "Virginia Beach",
     cities: [
       "Virginia Beach",
@@ -981,7 +982,7 @@ const US_METRO_AREAS = {
   "atlanta-metro": {
     name: "Atlanta Metro Area",
     display_name: "Atlanta Metro",
-    state: "GA",
+    state_code: "GA",
     primary_city: "Atlanta",
     cities: [
       "Atlanta",
@@ -1007,7 +1008,7 @@ const US_METRO_AREAS = {
   "colorado-springs-metro": {
     name: "Colorado Springs Metro Area",
     display_name: "Colorado Springs Metro",
-    state: "CO",
+    state_code: "CO",
     primary_city: "Colorado Springs",
     cities: [
       "Colorado Springs",
@@ -1033,7 +1034,7 @@ const US_METRO_AREAS = {
   "omaha-metro": {
     name: "Omaha Metro Area",
     display_name: "Omaha Metro",
-    state: "NE",
+    state_code: "NE",
     primary_city: "Omaha",
     cities: [
       "Omaha",
@@ -1059,7 +1060,7 @@ const US_METRO_AREAS = {
   "raleigh-metro": {
     name: "Raleigh Metro Area",
     display_name: "Raleigh Metro",
-    state: "NC",
+    state_code: "NC",
     primary_city: "Raleigh",
     cities: [
       "Raleigh",
@@ -1085,7 +1086,7 @@ const US_METRO_AREAS = {
   "miami-metro": {
     name: "Miami Metro Area",
     display_name: "Miami Metro",
-    state: "FL",
+    state_code: "FL",
     primary_city: "Miami",
     cities: [
       "Miami",
@@ -1111,7 +1112,7 @@ const US_METRO_AREAS = {
   "minneapolis-metro": {
     name: "Minneapolis Metro Area",
     display_name: "Minneapolis Metro",
-    state: "MN",
+    state_code: "MN",
     primary_city: "Minneapolis",
     cities: [
       "Minneapolis",
@@ -1137,7 +1138,7 @@ const US_METRO_AREAS = {
   "tulsa-metro": {
     name: "Tulsa Metro Area",
     display_name: "Tulsa Metro",
-    state: "OK",
+    state_code: "OK",
     primary_city: "Tulsa",
     cities: [
       "Tulsa",
@@ -1163,7 +1164,7 @@ const US_METRO_AREAS = {
   "cleveland-metro": {
     name: "Cleveland Metro Area",
     display_name: "Cleveland Metro",
-    state: "OH",
+    state_code: "OH",
     primary_city: "Cleveland",
     cities: [
       "Cleveland",
@@ -1189,7 +1190,7 @@ const US_METRO_AREAS = {
   "wichita-metro": {
     name: "Wichita Metro Area",
     display_name: "Wichita Metro",
-    state: "KS",
+    state_code: "KS",
     primary_city: "Wichita",
     cities: [
       "Wichita",
@@ -1215,7 +1216,7 @@ const US_METRO_AREAS = {
   "arlington-metro": {
     name: "Arlington Metro Area",
     display_name: "Arlington Metro",
-    state: "TX",
+    state_code: "TX",
     primary_city: "Arlington",
     cities: [
       "Arlington",
@@ -1241,7 +1242,7 @@ const US_METRO_AREAS = {
   "new-orleans-metro": {
     name: "New Orleans Metro Area",
     display_name: "New Orleans Metro",
-    state: "LA",
+    state_code: "LA",
     primary_city: "New Orleans",
     cities: [
       "New Orleans",
@@ -1267,7 +1268,7 @@ const US_METRO_AREAS = {
   "tampa-metro": {
     name: "Tampa Metro Area",
     display_name: "Tampa Metro",
-    state: "FL",
+    state_code: "FL",
     primary_city: "Tampa",
     cities: [
       "Tampa",
@@ -1293,7 +1294,7 @@ const US_METRO_AREAS = {
   "buffalo-metro": {
     name: "Buffalo Metro Area",
     display_name: "Buffalo Metro",
-    state: "NY",
+    state_code: "NY",
     primary_city: "Buffalo",
     cities: [
       "Buffalo",
@@ -1317,12 +1318,52 @@ const US_METRO_AREAS = {
   }
 };
 
+// Helper functions to work with state codes
+function getMetroAreasByState(stateCode) {
+  return Object.entries(US_METRO_AREAS)
+    .filter(([key, metro]) => metro.state_code === stateCode)
+    .sort((a, b) => a[1].rank - b[1].rank)
+    .map(([key, metro]) => ({ key, ...metro }));
+}
+
+function findMetroAreaByCity(cityName, stateCode) {
+  for (const [key, metro] of Object.entries(US_METRO_AREAS)) {
+    if (metro.state_code === stateCode && metro.cities.includes(cityName)) {
+      return { key, ...metro };
+    }
+  }
+  return null;
+}
+
+// Function to generate cities.js additions
+function generateCitiesJSAdditions() {
+  const stateMetroAdditions = {};
+  
+  Object.entries(US_METRO_AREAS).forEach(([key, metro]) => {
+    const stateCode = metro.state_code;
+    if (!stateMetroAdditions[stateCode]) {
+      stateMetroAdditions[stateCode] = [];
+    }
+    stateMetroAdditions[stateCode].push(metro.name);
+  });
+  
+  return stateMetroAdditions;
+}
+
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = US_METRO_AREAS;
+  module.exports = {
+    US_METRO_AREAS,
+    getMetroAreasByState,
+    findMetroAreaByCity,
+    generateCitiesJSAdditions
+  };
 }
 
 // Also create a browser-friendly global
 if (typeof window !== 'undefined') {
   window.US_METRO_AREAS = US_METRO_AREAS;
+  window.getMetroAreasByState = getMetroAreasByState;
+  window.findMetroAreaByCity = findMetroAreaByCity;
+  window.generateCitiesJSAdditions = generateCitiesJSAdditions;
 }

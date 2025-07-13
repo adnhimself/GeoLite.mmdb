@@ -1,13 +1,14 @@
 /**
  * Canadian Metro Areas Mapping (Census Metropolitan Areas)
- * Cities are limited to the primary province only to avoid cross-province confusion
+ * Uses province codes (ON, QC, BC, etc.) to match cities.js format
+ * Metro area names designed to be added to cities.js arrays
  */
 
 const CANADIAN_METRO_AREAS = {
   "toronto-metro": {
     name: "Toronto Metro Area",
     display_name: "Toronto Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Toronto",
     cities: [
       "Toronto",
@@ -33,7 +34,7 @@ const CANADIAN_METRO_AREAS = {
   "montreal-metro": {
     name: "Montreal Metro Area",
     display_name: "Montreal Metro",
-    province: "QC",
+    province_code: "QC",
     primary_city: "Montreal",
     cities: [
       "Montreal",
@@ -59,7 +60,7 @@ const CANADIAN_METRO_AREAS = {
   "vancouver-metro": {
     name: "Vancouver Metro Area",
     display_name: "Vancouver Metro",
-    province: "BC",
+    province_code: "BC",
     primary_city: "Vancouver",
     cities: [
       "Vancouver",
@@ -85,7 +86,7 @@ const CANADIAN_METRO_AREAS = {
   "calgary-metro": {
     name: "Calgary Metro Area",
     display_name: "Calgary Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Calgary",
     cities: [
       "Calgary",
@@ -111,7 +112,7 @@ const CANADIAN_METRO_AREAS = {
   "edmonton-metro": {
     name: "Edmonton Metro Area",
     display_name: "Edmonton Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Edmonton",
     cities: [
       "Edmonton",
@@ -137,7 +138,7 @@ const CANADIAN_METRO_AREAS = {
   "ottawa-metro": {
     name: "Ottawa Metro Area",
     display_name: "Ottawa Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Ottawa",
     cities: [
       "Ottawa",
@@ -163,7 +164,7 @@ const CANADIAN_METRO_AREAS = {
   "winnipeg-metro": {
     name: "Winnipeg Metro Area",
     display_name: "Winnipeg Metro",
-    province: "MB",
+    province_code: "MB",
     primary_city: "Winnipeg",
     cities: [
       "Winnipeg",
@@ -189,7 +190,7 @@ const CANADIAN_METRO_AREAS = {
   "quebec-city-metro": {
     name: "Quebec City Metro Area",
     display_name: "Quebec City Metro",
-    province: "QC",
+    province_code: "QC",
     primary_city: "Quebec City",
     cities: [
       "Quebec City",
@@ -215,7 +216,7 @@ const CANADIAN_METRO_AREAS = {
   "hamilton-metro": {
     name: "Hamilton Metro Area",
     display_name: "Hamilton Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Hamilton",
     cities: [
       "Hamilton",
@@ -241,7 +242,7 @@ const CANADIAN_METRO_AREAS = {
   "kitchener-metro": {
     name: "Kitchener Metro Area",
     display_name: "Kitchener Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Kitchener",
     cities: [
       "Kitchener",
@@ -267,7 +268,7 @@ const CANADIAN_METRO_AREAS = {
   "london-metro": {
     name: "London Metro Area",
     display_name: "London Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "London",
     cities: [
       "London",
@@ -293,7 +294,7 @@ const CANADIAN_METRO_AREAS = {
   "halifax-metro": {
     name: "Halifax Metro Area",
     display_name: "Halifax Metro",
-    province: "NS",
+    province_code: "NS",
     primary_city: "Halifax",
     cities: [
       "Halifax",
@@ -319,7 +320,7 @@ const CANADIAN_METRO_AREAS = {
   "oshawa-metro": {
     name: "Oshawa Metro Area",
     display_name: "Oshawa Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Oshawa",
     cities: [
       "Oshawa",
@@ -345,7 +346,7 @@ const CANADIAN_METRO_AREAS = {
   "victoria-metro": {
     name: "Victoria Metro Area",
     display_name: "Victoria Metro",
-    province: "BC",
+    province_code: "BC",
     primary_city: "Victoria",
     cities: [
       "Victoria",
@@ -371,7 +372,7 @@ const CANADIAN_METRO_AREAS = {
   "windsor-metro": {
     name: "Windsor Metro Area",
     display_name: "Windsor Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Windsor",
     cities: [
       "Windsor",
@@ -397,7 +398,7 @@ const CANADIAN_METRO_AREAS = {
   "saskatoon-metro": {
     name: "Saskatoon Metro Area",
     display_name: "Saskatoon Metro",
-    province: "SK",
+    province_code: "SK",
     primary_city: "Saskatoon",
     cities: [
       "Saskatoon",
@@ -423,7 +424,7 @@ const CANADIAN_METRO_AREAS = {
   "regina-metro": {
     name: "Regina Metro Area",
     display_name: "Regina Metro",
-    province: "SK",
+    province_code: "SK",
     primary_city: "Regina",
     cities: [
       "Regina",
@@ -449,7 +450,7 @@ const CANADIAN_METRO_AREAS = {
   "sherbrooke-metro": {
     name: "Sherbrooke Metro Area",
     display_name: "Sherbrooke Metro",
-    province: "QC",
+    province_code: "QC",
     primary_city: "Sherbrooke",
     cities: [
       "Sherbrooke",
@@ -475,7 +476,7 @@ const CANADIAN_METRO_AREAS = {
   "st-catharines-metro": {
     name: "St. Catharines Metro Area",
     display_name: "St. Catharines Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "St. Catharines",
     cities: [
       "St. Catharines",
@@ -501,7 +502,7 @@ const CANADIAN_METRO_AREAS = {
   "barrie-metro": {
     name: "Barrie Metro Area",
     display_name: "Barrie Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Barrie",
     cities: [
       "Barrie",
@@ -527,7 +528,7 @@ const CANADIAN_METRO_AREAS = {
   "kelowna-metro": {
     name: "Kelowna Metro Area",
     display_name: "Kelowna Metro",
-    province: "BC",
+    province_code: "BC",
     primary_city: "Kelowna",
     cities: [
       "Kelowna",
@@ -553,7 +554,7 @@ const CANADIAN_METRO_AREAS = {
   "abbotsford-metro": {
     name: "Abbotsford Metro Area",
     display_name: "Abbotsford Metro",
-    province: "BC",
+    province_code: "BC",
     primary_city: "Abbotsford",
     cities: [
       "Abbotsford",
@@ -579,7 +580,7 @@ const CANADIAN_METRO_AREAS = {
   "kingston-metro": {
     name: "Kingston Metro Area",
     display_name: "Kingston Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Kingston",
     cities: [
       "Kingston",
@@ -605,7 +606,7 @@ const CANADIAN_METRO_AREAS = {
   "saguenay-metro": {
     name: "Saguenay Metro Area",
     display_name: "Saguenay Metro",
-    province: "QC",
+    province_code: "QC",
     primary_city: "Saguenay",
     cities: [
       "Saguenay",
@@ -631,7 +632,7 @@ const CANADIAN_METRO_AREAS = {
   "trois-rivieres-metro": {
     name: "Trois-Rivières Metro Area",
     display_name: "Trois-Rivières Metro",
-    province: "QC",
+    province_code: "QC",
     primary_city: "Trois-Rivières",
     cities: [
       "Trois-Rivières",
@@ -657,7 +658,7 @@ const CANADIAN_METRO_AREAS = {
   "moncton-metro": {
     name: "Moncton Metro Area",
     display_name: "Moncton Metro",
-    province: "NB",
+    province_code: "NB",
     primary_city: "Moncton",
     cities: [
       "Moncton",
@@ -683,7 +684,7 @@ const CANADIAN_METRO_AREAS = {
   "saint-john-metro": {
     name: "Saint John Metro Area",
     display_name: "Saint John Metro",
-    province: "NB",
+    province_code: "NB",
     primary_city: "Saint John",
     cities: [
       "Saint John",
@@ -709,7 +710,7 @@ const CANADIAN_METRO_AREAS = {
   "thunder-bay-metro": {
     name: "Thunder Bay Metro Area",
     display_name: "Thunder Bay Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Thunder Bay",
     cities: [
       "Thunder Bay",
@@ -735,7 +736,7 @@ const CANADIAN_METRO_AREAS = {
   "sudbury-metro": {
     name: "Sudbury Metro Area",
     display_name: "Sudbury Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Sudbury",
     cities: [
       "Sudbury",
@@ -761,7 +762,7 @@ const CANADIAN_METRO_AREAS = {
   "peterborough-metro": {
     name: "Peterborough Metro Area",
     display_name: "Peterborough Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Peterborough",
     cities: [
       "Peterborough",
@@ -787,7 +788,7 @@ const CANADIAN_METRO_AREAS = {
   "brantford-metro": {
     name: "Brantford Metro Area",
     display_name: "Brantford Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Brantford",
     cities: [
       "Brantford",
@@ -813,7 +814,7 @@ const CANADIAN_METRO_AREAS = {
   "guelph-metro": {
     name: "Guelph Metro Area",
     display_name: "Guelph Metro",
-    province: "ON",
+    province_code: "ON",
     primary_city: "Guelph",
     cities: [
       "Guelph",
@@ -839,7 +840,7 @@ const CANADIAN_METRO_AREAS = {
   "charlottetown-metro": {
     name: "Charlottetown Metro Area",
     display_name: "Charlottetown Metro",
-    province: "PE",
+    province_code: "PE",
     primary_city: "Charlottetown",
     cities: [
       "Charlottetown",
@@ -865,7 +866,7 @@ const CANADIAN_METRO_AREAS = {
   "fredericton-metro": {
     name: "Fredericton Metro Area",
     display_name: "Fredericton Metro",
-    province: "NB",
+    province_code: "NB",
     primary_city: "Fredericton",
     cities: [
       "Fredericton",
@@ -891,7 +892,7 @@ const CANADIAN_METRO_AREAS = {
   "red-deer-metro": {
     name: "Red Deer Metro Area",
     display_name: "Red Deer Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Red Deer",
     cities: [
       "Red Deer",
@@ -917,7 +918,7 @@ const CANADIAN_METRO_AREAS = {
   "lethbridge-metro": {
     name: "Lethbridge Metro Area",
     display_name: "Lethbridge Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Lethbridge",
     cities: [
       "Lethbridge",
@@ -943,7 +944,7 @@ const CANADIAN_METRO_AREAS = {
   "medicine-hat-metro": {
     name: "Medicine Hat Metro Area",
     display_name: "Medicine Hat Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Medicine Hat",
     cities: [
       "Medicine Hat",
@@ -969,7 +970,7 @@ const CANADIAN_METRO_AREAS = {
   "grande-prairie-metro": {
     name: "Grande Prairie Metro Area",
     display_name: "Grande Prairie Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Grande Prairie",
     cities: [
       "Grande Prairie",
@@ -995,7 +996,7 @@ const CANADIAN_METRO_AREAS = {
   "wood-buffalo-metro": {
     name: "Wood Buffalo Metro Area",
     display_name: "Wood Buffalo Metro",
-    province: "AB",
+    province_code: "AB",
     primary_city: "Fort McMurray",
     cities: [
       "Fort McMurray",
@@ -1021,7 +1022,7 @@ const CANADIAN_METRO_AREAS = {
   "prince-george-metro": {
     name: "Prince George Metro Area",
     display_name: "Prince George Metro",
-    province: "BC",
+    province_code: "BC",
     primary_city: "Prince George",
     cities: [
       "Prince George",
@@ -1053,21 +1054,36 @@ function getMetroAreasByPopulation() {
 }
 
 // Helper function to get metro areas by province
-function getMetroAreasByProvince(province) {
+function getMetroAreasByProvince(provinceCode) {
   return Object.entries(CANADIAN_METRO_AREAS)
-    .filter(([key, metro]) => metro.province === province)
+    .filter(([key, metro]) => metro.province_code === provinceCode)
     .sort((a, b) => b[1].population - a[1].population)
     .map(([key, metro]) => ({ key, ...metro }));
 }
 
 // Helper function to find metro area by city
-function findMetroAreaByCity(cityName) {
+function findMetroAreaByCity(cityName, provinceCode) {
   for (const [key, metro] of Object.entries(CANADIAN_METRO_AREAS)) {
-    if (metro.cities.includes(cityName)) {
+    if (metro.province_code === provinceCode && metro.cities.includes(cityName)) {
       return { key, ...metro };
     }
   }
   return null;
+}
+
+// Function to generate cities.js additions
+function generateCitiesJSAdditions() {
+  const provinceMetroAdditions = {};
+  
+  Object.entries(CANADIAN_METRO_AREAS).forEach(([key, metro]) => {
+    const provinceCode = metro.province_code;
+    if (!provinceMetroAdditions[provinceCode]) {
+      provinceMetroAdditions[provinceCode] = [];
+    }
+    provinceMetroAdditions[provinceCode].push(metro.name);
+  });
+  
+  return provinceMetroAdditions;
 }
 
 // Export for use in other modules
@@ -1076,7 +1092,8 @@ if (typeof module !== 'undefined' && module.exports) {
     CANADIAN_METRO_AREAS,
     getMetroAreasByPopulation,
     getMetroAreasByProvince,
-    findMetroAreaByCity
+    findMetroAreaByCity,
+    generateCitiesJSAdditions
   };
 }
 
@@ -1086,4 +1103,5 @@ if (typeof window !== 'undefined') {
   window.getMetroAreasByPopulation = getMetroAreasByPopulation;
   window.getMetroAreasByProvince = getMetroAreasByProvince;
   window.findMetroAreaByCity = findMetroAreaByCity;
+  window.generateCitiesJSAdditions = generateCitiesJSAdditions;
 }
